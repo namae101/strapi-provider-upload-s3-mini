@@ -51,7 +51,8 @@ export default {
   init(config: InitOptions) {
     const key = config.key;
     const secret = config.secret;
-    const { endpoint, region, bucket, directory, cdnEndpoint } = config;
+    const bucket = config.bucket || config.space;
+    const { endpoint, region, directory, cdnEndpoint } = config;
 
     // Ensure endpoint includes the bucket name as a subdomain if not already present
     // s3mini often works better with this format for DigitalOcean/Cloudflare

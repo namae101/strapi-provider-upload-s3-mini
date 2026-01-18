@@ -11,13 +11,13 @@ export default {
   input: 'src/index.ts',
   output: [
     {
-      file: pkg.main,
+      file: 'dist/index.cjs',
       format: 'cjs',
       sourcemap: true,
       exports: 'default',
     },
     {
-      file: pkg.module,
+      file: 'dist/index.js',
       format: 'es',
       sourcemap: true,
     },
@@ -25,6 +25,8 @@ export default {
   external: [
     ...Object.keys(pkg.dependencies || {}),
     ...Object.keys(pkg.peerDependencies || {}),
+    'node:stream',
+    'node:url',
     'stream',
     'url',
   ],
