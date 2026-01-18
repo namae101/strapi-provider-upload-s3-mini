@@ -22,7 +22,7 @@ module.exports = ({ env }) => ({
         secret: env('S3_SECRET_KEY'),
         endpoint: env('S3_ENDPOINT'), // e.g. https://nyc3.digitaloceanspaces.com
         region: env('S3_REGION'),
-        space: env('S3_BUCKET'),
+        bucket: env('S3_BUCKET'),
         directory: env('S3_DIRECTORY'), // Optional
         cdnEndpoint: env('S3_CDN'), // Optional
       },
@@ -39,7 +39,7 @@ module.exports = ({ env }) => ({
 | `secret` | S3 Secret Key | `x8k...` |
 | `endpoint` | S3 Endpoint | `https://nyc3.digitaloceanspaces.com` |
 | `region` | S3 Region | `nyc3` |
-| `space` | S3 Bucket Name | `my-bucket` |
+| `bucket` | S3 Bucket Name | `my-bucket` |
 | `directory` | Optional directory in the bucket | `uploads` |
 | `cdnEndpoint` | Optional CDN endpoint | `https://cdn.example.com` |
 
