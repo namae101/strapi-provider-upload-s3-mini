@@ -1,0 +1,36 @@
+{
+  "name": "strapi-provider-upload-s3-mini",
+  "version": "1.0.0",
+  "description": "S3mini provider for Strapi uploads",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --build tsconfig.build.json",
+    "watch": "tsc -w",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "strapi",
+    "upload",
+    "provider",
+    "s3",
+    "do",
+    "spaces"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.19.30",
+    "typescript": "^5.0.0",
+    "vitest": "^4.0.17"
+  },
+  "dependencies": {
+    "s3mini": "^0.9.1"
+  }
+}
